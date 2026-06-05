@@ -1,0 +1,68 @@
+name: Bug report
+description: Report a problem with the @Not macro
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please include as much detail as you can.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug and what you expected instead.
+      placeholder: The macro generated `isNotIsEnabled` instead of `isNotEnabled` for my property.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Minimal code that triggers the issue.
+      render: swift
+      placeholder: |
+        @Not
+        struct Example {
+            var isEnabled: Bool
+        }
+    validations:
+      required: true
+
+  - type: textarea
+    id: expanded
+    attributes:
+      label: Expanded output (if available)
+      description: Paste the macro expansion or compiler error, if you have it.
+      render: swift
+
+  - type: input
+    id: swift-version
+    attributes:
+      label: Swift version
+      placeholder: "6.2"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - macOS
+        - iOS
+        - tvOS
+        - watchOS
+        - macCatalyst
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
+      description: Logs, screenshots, or related issues.

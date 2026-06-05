@@ -1,0 +1,59 @@
+name: Feature request
+description: Suggest an improvement to the @Not macro
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share an idea for improving `@Not`. A clear use case helps a lot.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What are you trying to do, and what's missing today?
+      placeholder: I want `@Not` to support `Bool?` properties.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: How should the macro behave?
+      render: swift
+      placeholder: |
+        @Not
+        struct Example {
+            var isEnabled: Bool?
+        }
+
+        // Generates:
+        // var isNotEnabled: Bool? { isEnabled.map { !$0 } }
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Affected property kinds
+      options:
+        - label: Stored properties
+        - label: Computed properties
+        - label: Static / class properties
+        - label: Property wrappers (@State, @Published, etc.)
+        - label: Naming rules
+        - label: Other
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any workarounds or other approaches you've thought about.
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
