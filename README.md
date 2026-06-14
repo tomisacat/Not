@@ -1,5 +1,16 @@
 # Not
 
+<div align="center">
+
+[![CI](https://github.com/tomisacat/Not/actions/workflows/ci.yml/badge.svg)](https://github.com/tomisacat/Not/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/tomisacat/Not)](https://github.com/tomisacat/Not/releases)
+[![Swift 6.2](https://img.shields.io/badge/Swift-6.2-FA7343?logo=swift&logoColor=white)](https://swift.org)
+[![Platforms](https://img.shields.io/badge/Platforms-iOS%2013+|macOS%2010.15+|tvOS%2013+|watchOS%206+-lightgrey)](https://developer.apple.com)
+[![SPM](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+</div>
+
 A Swift macro that generates read-only `isNot*` computed properties for every eligible `Bool` property on a type.
 
 Instead of writing negated checks by hand, annotate a type with `@Not` and get peers like `isNotEnabled` for `isEnabled`, or `isNotDarkMode` for `isDarkMode`.
